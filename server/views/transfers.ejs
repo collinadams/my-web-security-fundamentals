@@ -22,7 +22,7 @@
               <% if (account.id == accountFrom) { %>
                 selected
               <% } %> >
-              <%= account.maskedAccountNumber %>(<%- account.name %>)
+              <%= account.maskedAccountNumber %>(<%= account.name %>)
               $<%= account.balance %>
             </option>
           <% } %>
@@ -39,7 +39,7 @@
                 <% if (account.id == accountTo) { %>
                 selected
                 <% } %> >
-                <%= account.maskedAccountNumber %>(<%- account.name %>)
+                <%= account.maskedAccountNumber %>(<%= account.name %>)
                 $<%= account.balance %>
               </option>
             <% } %>

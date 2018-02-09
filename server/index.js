@@ -16,6 +16,7 @@ const user = require('./routes/user');
 const session = require('express-session');
 const SQLiteStore = require('connect-sqlite3')(session);
 const { flashMiddleware } = require('./flash');
+const csp = require('helmet-csp');
 
 const app = express();
 
@@ -47,6 +48,14 @@ app.use(session({
   saveUninitialized: true,
   resave: 'true',
   secret: 'secret'
+}));
+app.use(csp({
+  directives: {
+    styleSrc: ["'self'", "'unsafe-inline'"],
+    fontSrc: ['data:'],
+    defaultSrc: ["'self'"],
+    // scriptSrc: ["'self'", "'unsafe-inline'"],
+  },
 }));
 
 ///////////////////////////////////////////
